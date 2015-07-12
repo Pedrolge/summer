@@ -1,0 +1,858 @@
+[
+ {
+  "meta": {
+   "map": "small_lgjune14", 
+   "node": "ChargingPoint", 
+   "pointset": "small_lgjune14_b"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "undocking", 
+     "edge_id": "ChargingPoint_WayPoint1", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "WayPoint1", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }
+   ], 
+   "localise_by_topic": "", 
+   "map": "small_lgjune14", 
+   "name": "ChargingPoint", 
+   "pointset": "small_lgjune14_b", 
+   "pose": {
+    "orientation": {
+     "w": 0.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ], 
+   "xy_goal_tolerance": 0.3, 
+   "yaw_goal_tolerance": 0.1
+  }
+ }, 
+ {
+  "meta": {
+   "map": "small_lgjune14", 
+   "node": "WayPoint5", 
+   "pointset": "small_lgjune14_b"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint5_WayPoint4", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "WayPoint4", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }
+   ], 
+   "localise_by_topic": "", 
+   "map": "small_lgjune14", 
+   "name": "WayPoint5", 
+   "pointset": "small_lgjune14_b", 
+   "pose": {
+    "orientation": {
+     "w": 0.732407, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": -0.680867
+    }, 
+    "position": {
+     "x": -6.63232, 
+     "y": -0.0776163, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ], 
+   "xy_goal_tolerance": 0.3, 
+   "yaw_goal_tolerance": 0.1
+  }
+ }, 
+ {
+  "meta": {
+   "map": "small_lgjune14", 
+   "node": "WayPoint9", 
+   "pointset": "small_lgjune14_b"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint9_WayPoint8", 
+     "inflation_radius": 0.0, 
+     "map_2d": "", 
+     "node": "WayPoint8", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }
+   ], 
+   "localise_by_topic": "", 
+   "map": "small_lgjune14", 
+   "name": "WayPoint9", 
+   "pointset": "small_lgjune14_b", 
+   "pose": {
+    "orientation": {
+     "w": 0.71145265026, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.702734036772
+    }, 
+    "position": {
+     "x": 3.42352704245, 
+     "y": -1.39801147001, 
+     "z": -2.13702089011e-10
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ], 
+   "xy_goal_tolerance": 0.0, 
+   "yaw_goal_tolerance": 0.0
+  }
+ }, 
+ {
+  "meta": {
+   "map": "small_lgjune14", 
+   "node": "WayPoint3", 
+   "pointset": "small_lgjune14_b"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint3_WayPoint4", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "WayPoint4", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint3_WayPoint6", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "WayPoint6", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }
+   ], 
+   "localise_by_topic": "", 
+   "map": "small_lgjune14", 
+   "name": "WayPoint3", 
+   "pointset": "small_lgjune14_b", 
+   "pose": {
+    "orientation": {
+     "w": -0.0319082, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.999491
+    }, 
+    "position": {
+     "x": -8.90283, 
+     "y": 4.13239, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ], 
+   "xy_goal_tolerance": 0.3, 
+   "yaw_goal_tolerance": 0.1
+  }
+ }, 
+ {
+  "meta": {
+   "map": "small_lgjune14", 
+   "node": "WayPoint4", 
+   "pointset": "small_lgjune14_b"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint4_WayPoint2", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "WayPoint2", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint4_WayPoint3", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "WayPoint3", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint4_WayPoint5", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "WayPoint5", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }
+   ], 
+   "localise_by_topic": "", 
+   "map": "small_lgjune14", 
+   "name": "WayPoint4", 
+   "pointset": "small_lgjune14_b", 
+   "pose": {
+    "orientation": {
+     "w": 0.68873, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": -0.725018
+    }, 
+    "position": {
+     "x": -6.66189, 
+     "y": 2.39359, 
+     "z": 3.46945e-18
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ], 
+   "xy_goal_tolerance": 0.3, 
+   "yaw_goal_tolerance": 0.1
+  }
+ }, 
+ {
+  "meta": {
+   "map": "small_lgjune14", 
+   "node": "WayPoint7", 
+   "pointset": "small_lgjune14_b"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint7_WayPoint1", 
+     "inflation_radius": 0.0, 
+     "map_2d": "", 
+     "node": "WayPoint1", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint7_WayPoint6", 
+     "inflation_radius": 0.0, 
+     "map_2d": "", 
+     "node": "WayPoint6", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint7_WayPoint2", 
+     "inflation_radius": 0.0, 
+     "map_2d": "", 
+     "node": "WayPoint2", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "doorPassing", 
+     "edge_id": "WayPoint7_WayPoint8", 
+     "inflation_radius": 0.0, 
+     "map_2d": "", 
+     "node": "WayPoint8", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }
+   ], 
+   "localise_by_topic": "", 
+   "map": "small_lgjune14", 
+   "name": "WayPoint7", 
+   "pointset": "small_lgjune14_b", 
+   "pose": {
+    "orientation": {
+     "w": 0.999211217863, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0397107302373
+    }, 
+    "position": {
+     "x": -0.577515255053, 
+     "y": 1.38605352149, 
+     "z": 1.27747405015e-09
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ], 
+   "xy_goal_tolerance": 0.0, 
+   "yaw_goal_tolerance": 0.0
+  }
+ }, 
+ {
+  "meta": {
+   "map": "small_lgjune14", 
+   "node": "WayPoint8", 
+   "pointset": "small_lgjune14_b"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "doorPassing", 
+     "edge_id": "WayPoint8_WayPoint7", 
+     "inflation_radius": 0.0, 
+     "map_2d": "", 
+     "node": "WayPoint7", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint8_WayPoint9", 
+     "inflation_radius": 0.0, 
+     "map_2d": "", 
+     "node": "WayPoint9", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }
+   ], 
+   "localise_by_topic": "", 
+   "map": "small_lgjune14", 
+   "name": "WayPoint8", 
+   "pointset": "small_lgjune14_b", 
+   "pose": {
+    "orientation": {
+     "w": -0.0383411548889, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.999264707593
+    }, 
+    "position": {
+     "x": 0.861953323252, 
+     "y": 1.23613131665, 
+     "z": 5.17765066932e-10
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ], 
+   "xy_goal_tolerance": 0.0, 
+   "yaw_goal_tolerance": 0.0
+  }
+ }, 
+ {
+  "meta": {
+   "map": "small_lgjune14", 
+   "node": "WayPoint1", 
+   "pointset": "small_lgjune14_b"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint1_WayPoint2", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "WayPoint2", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "docking", 
+     "edge_id": "WayPoint1_ChargingPoint", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "ChargingPoint", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint1_WayPoint7", 
+     "inflation_radius": 0.0, 
+     "map_2d": "", 
+     "node": "WayPoint7", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }
+   ], 
+   "localise_by_topic": "", 
+   "map": "small_lgjune14", 
+   "name": "WayPoint1", 
+   "pointset": "small_lgjune14_b", 
+   "pose": {
+    "orientation": {
+     "w": 0.999996, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.00294001
+    }, 
+    "position": {
+     "x": -0.968274, 
+     "y": 0.129231, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ], 
+   "xy_goal_tolerance": 0.3, 
+   "yaw_goal_tolerance": 0.1
+  }
+ }, 
+ {
+  "meta": {
+   "map": "small_lgjune14", 
+   "node": "WayPoint6", 
+   "pointset": "small_lgjune14_b"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint6_WayPoint2", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "WayPoint2", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint6_WayPoint3", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "WayPoint3", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint6_WayPoint7", 
+     "inflation_radius": 0.0, 
+     "map_2d": "", 
+     "node": "WayPoint7", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }
+   ], 
+   "localise_by_topic": "", 
+   "map": "small_lgjune14", 
+   "name": "WayPoint6", 
+   "pointset": "small_lgjune14_b", 
+   "pose": {
+    "orientation": {
+     "w": 0.997529, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": -0.0702523
+    }, 
+    "position": {
+     "x": 3.58708, 
+     "y": 4.4727, 
+     "z": 3.46945e-18
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ], 
+   "xy_goal_tolerance": 0.3, 
+   "yaw_goal_tolerance": 0.1
+  }
+ }, 
+ {
+  "meta": {
+   "map": "small_lgjune14", 
+   "node": "WayPoint2", 
+   "pointset": "small_lgjune14_b"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint2_WayPoint1", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "WayPoint1", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint2_WayPoint4", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "WayPoint4", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint2_WayPoint6", 
+     "inflation_radius": 0.0, 
+     "map_2d": "small_lgjune14", 
+     "node": "WayPoint6", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }, 
+    {
+     "action": "move_base", 
+     "edge_id": "WayPoint2_WayPoint7", 
+     "inflation_radius": 0.0, 
+     "map_2d": "", 
+     "node": "WayPoint7", 
+     "recovery_behaviours_config": "", 
+     "top_vel": 0.55
+    }
+   ], 
+   "localise_by_topic": "", 
+   "map": "small_lgjune14", 
+   "name": "WayPoint2", 
+   "pointset": "small_lgjune14_b", 
+   "pose": {
+    "orientation": {
+     "w": -0.0882391, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.996099
+    }, 
+    "position": {
+     "x": -2.78794, 
+     "y": 2.10614, 
+     "z": -6.93889e-18
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ], 
+   "xy_goal_tolerance": 0.3, 
+   "yaw_goal_tolerance": 0.1
+  }
+ }
+]
