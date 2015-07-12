@@ -155,11 +155,11 @@ class Dijkstra(object):
 
 	def update_estimated_pose(self,data):
 		self.e_pose = data.data
-		print "Updated current waypoint: %s" %self.e_pose
+		#print "Updated current waypoint: %s" %self.e_pose
 
 	def update_closest_node(self,data):
 		self.closest = data.data
-		print "Updated closest waypoint: %s" %self.closest
+		#print "Updated closest waypoint: %s" %self.closest
 
 	def is_moving(self):
 		return not(self.client.get_state() == GoalStatus.SUCCEEDED or self.client.get_state() == GoalStatus.ABORTED)
