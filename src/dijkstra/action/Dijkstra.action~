@@ -1,0 +1,5 @@
+string goal_waypoint
+---
+bool success
+---
+
