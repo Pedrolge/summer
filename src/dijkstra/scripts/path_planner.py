@@ -16,6 +16,7 @@ from geometry_msgs.msg import ( PoseStamped, PoseWithCovarianceStamped,
 from strands_navigation_msgs.srv import GetTopologicalMap
 from dijkstra.msg import DijkstraAction
 
+
 def distance(point1, point2):
 	return sqrt(pow(point1.x - point2.x, 2) + pow(point1.y - point2.y, 2))
 
