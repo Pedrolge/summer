@@ -15,6 +15,7 @@ from geometry_msgs.msg import ( PoseStamped, PoseWithCovarianceStamped,
                                 PoseArray, Quaternion )
 from strands_navigation_msgs.srv import GetTopologicalMap
 from dijkstra.msg import DijkstraAction
+from dijkstra.msg import PositionInfo
 
 
 def distance(point1, point2):
@@ -31,9 +32,14 @@ class Dijkstra(object):
 	waypoint = "WayPoint1"
 	closest = ""
 	e_pose = ""
+	current_edge = ""
 	next_node = ""
 	goal = PoseStamped()
 	is_at_goal = False
+	robot2 = PositionInfo()
+
+
+	caution_edges = ['WayPoint7_WayPoint8_WayPoint9_WayPoint10']
 
 	path = []
 	vert = dict()
@@ -50,6 +56,8 @@ class Dijkstra(object):
 
 		rospy.Subscriber('current_node', String, self.update_estimated_pose)
 		rospy.Subscriber('closest_node', String, self.update_closest_node)
+		rospy.Subscriber('robot2/position_info', PositionInfo, self.update_robot2_node)
+		self.pub = rospy.Publisher('robot1/position_info', PositionInfo, queue_size=3)
 
 		self.server.start()
 
@@ -116,11 +124,16 @@ class Dijkstra(object):
 
 		for i in range(1, len(path)):
 			print "Next waypoint: %s" %(path[i])
+
+
 			self.next_node  = path[i]
+
+			self.current_edge = self.e_pose + "_" + self.next_node
+			self.publish_info()
+
 			pos = self.vert[path[i]]
 
 			self.goal = PoseStamped()
-		    #relative to map = map, relative to robot = base_link
 			self.goal.header.frame_id = "map"
 			self.goal.header.stamp = rospy.get_rostime()
 		    
@@ -128,7 +141,6 @@ class Dijkstra(object):
 			self.goal.pose.position.y = pos.y
 			self.goal.pose.orientation = Quaternion(0,0,0.931,0.365)
 		    
-		    #moveBaseAction takes a MoveBaseGoal which takes a PoseStamped
 			self.client.send_goal(MoveBaseGoal(self.goal), feedback_cb=self.feedback)
 
 			while not self.has_reached_goal():
@@ -153,13 +165,27 @@ class Dijkstra(object):
 	def cancel_goal():
 		client.cancel_goal()
 
-	def update_estimated_pose(self,data):
+	def update_estimated_pose(self, data):
 		self.e_pose = data.data
+		self.publish_info()
 		#print "Updated current waypoint: %s" %self.e_pose
 
-	def update_closest_node(self,data):
+	def update_closest_node(self, data):
 		self.closest = data.data
+		self.publish_info()
 		#print "Updated closest waypoint: %s" %self.closest
+
+	def update_robot2_node(self, data)
+		self.robot2 = data
+
+	def publish_info(self):
+		message = PositionInfo()
+		message.closest_node = self.closest
+		message.current_node = self.e_pose
+		message.current_edge = self.current_edge
+
+		self.pub.publish(message)
+
 
 	def is_moving(self):
 		return not(self.client.get_state() == GoalStatus.SUCCEEDED or self.client.get_state() == GoalStatus.ABORTED)
@@ -179,7 +205,9 @@ class Dijkstra(object):
 	def make_plan(self, goal):
 		while (self.e_pose == "" or self.e_pose == "none"):
 			if (self.closest != "" and self.closest != "none"):
-				self.e_pose = self.closest
+				data = String()
+				data.data = self.closest
+				self.update_estimated_pose(data)
 				print "Current node changed to closest node: %s" %self.closest
 			rospy.sleep(1)
 
@@ -256,6 +284,11 @@ class Dijkstra(object):
 		path = path[::-1]
 		print "This is the path: " + str(path)
 		return path
+
+
+	def canGoTo(self, node):
+		pass
+
 
 
 if __name__ == '__main__':

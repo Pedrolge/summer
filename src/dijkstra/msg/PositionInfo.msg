@@ -1,0 +1,3 @@
+string closest_node
+string current_node
+string current_edge
