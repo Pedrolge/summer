@@ -26,7 +26,7 @@ class RandomGoal:
 		self.client.wait_for_server()
 
 		self.get_map_srv = rospy.ServiceProxy("/topological_map_publisher/get_topological_map", GetTopologicalMap)
-		self.top_map = self.get_map_srv('lg_june14').map
+		self.top_map = self.get_map_srv('lg_coordination').map
 
 	def send_random_goal(self):
 
