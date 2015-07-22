@@ -66,7 +66,9 @@ class Dijkstra(object):
 		self.pub = rospy.Publisher(self.my_name + '/position_info', PositionInfo, queue_size=3)
 		rospy.Subscriber('current_node', String, self.update_estimated_pose)
 		rospy.Subscriber('closest_node', String, self.update_closest_node)
-		rospy.Subscriber('robot2/position_info', PositionInfo, self.update_robot2_node)
+
+		if (len(self.other_robots) == 1)
+		rospy.Subscriber(self.other_robots[0] + '/position_info', PositionInfo, self.update_robot2_node)
 
 
 		self.server.start()
