@@ -70,7 +70,7 @@ tmux send-keys "rosrun master_sync_fkie master_sync _sync_topics:=['/robot2/posi
 tmux select-window -t $SESSION:8
 tmux send-keys " clear" C-m
 message "Path planner"
-tmux send-keys "rosrun dijkstra path_planner.py"
+tmux send-keys "roslaunch dijkstra path_planner.launch"
 
 tmux select-window -t $SESSION:9
 tmux send-keys " clear" C-m
