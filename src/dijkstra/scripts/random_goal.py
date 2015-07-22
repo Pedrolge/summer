@@ -40,7 +40,8 @@ class RandomGoal:
 		for name in nodes:
 			goal_list.append(name)
 
-		goal_list.remove("ChargingPoint")
+		if ("ChargingPoint" in goal_list):
+			goal_list.remove("ChargingPoint")
 
 		choice = randint(1, len(goal_list)-1)
 
