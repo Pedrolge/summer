@@ -132,7 +132,7 @@ class Dijkstra(object):
 		wp = goal.goal_waypoint
 
 		path = self.make_plan(wp)
-		fail = False
+
 
 		for i in range(1, len(path)):
 			print "Next waypoint: %s" %(path[i])
@@ -155,6 +155,7 @@ class Dijkstra(object):
 			self.goal.pose.orientation = Quaternion(0,0,0.931,0.365)
 		    
 			self.client.send_goal(MoveBaseGoal(self.goal), feedback_cb=self.feedback)
+
 
 			while not self.has_reached_goal():
 				self.client.wait_for_result(rospy.Duration(1.0))
@@ -181,10 +182,10 @@ class Dijkstra(object):
 
 		#DEFINING NEXT WAYPOINT, BASED ON THE VISITED NODES OF THE PATH
 		if len(self.visited) > 0:
-			#print "Next Waypoint is: %s" %path[len(self.visited)]
+			print "Next Waypoint is: %s" %path[len(self.visited)]
 			next = path[len(self.visited)]
 		else:
-			#print "Next Waypoint is: %s" %path[0]
+			print "Next Waypoint is: %s" %path[0]
 			next = path[0]
 
 	
@@ -221,8 +222,8 @@ class Dijkstra(object):
 				m_common_nodes = common
 				m_intersections = n
 				
-		print "Number of intersections: %i" %m_intersections
-		print "Nodes of my path in common with the caution path: " + str (m_common_nodes)
+		#print "Number of intersections: %i" %m_intersections
+		#print "Nodes of my path in common with the caution path: " + str (m_common_nodes)
 
 
 		##IF THE NUMBER OF NODES IN COMMON WITH A CAUTION PATH IS LESS THAN 2, THE PATHS DO NOT INTERSECT
@@ -245,8 +246,8 @@ class Dijkstra(object):
 				o_intersections += 1
 				o_common_nodes.append(i)
 
-		print "Number of intersections of the other robot's path: %i" %o_intersections
-		print "Nodes of the other robot's path in common with the caution path: " + str (o_common_nodes)
+		#print "Number of intersections of the other robot's path: %i" %o_intersections
+		#print "Nodes of the other robot's path in common with the caution path: " + str (o_common_nodes)
 
 		if (o_intersections < 2):
 			print "Next Waypoint is: %s" %next
@@ -262,7 +263,7 @@ class Dijkstra(object):
 			b = m_common_nodes[1]
 			m_direction = m_caution.index(b) - m_caution.index(a)
 
-		print "My direction is: %i" %m_direction
+		#print "My direction is: %i" %m_direction
 
 
 
@@ -274,7 +275,7 @@ class Dijkstra(object):
 			b = o_common_nodes[1]
 			o_direction = m_caution.index(b) - m_caution.index(a)
 
-		print "Other robot's direction is: %i" %o_direction
+		#print "Other robot's direction is: %i" %o_direction
 
 
 
@@ -323,6 +324,8 @@ class Dijkstra(object):
 			while not self.has_reached_goal():
 				self.client.wait_for_result(rospy.Duration(1.0))
 				if (self.client.get_state() == GoalStatus.PREEMPTED or self.client.get_state() == GoalStatus.ABORTED or self.client.get_state() == GoalStatus.LOST):
+					print GoalStatus.to_string(self.client.get_state())
+					
 					fail = True
 					break
 
