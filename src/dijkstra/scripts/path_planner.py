@@ -40,13 +40,21 @@ class Dijkstra(object):
 	robot2 = PositionInfo()
 
 
-	caution_edges = ['WayPoint7_WayPoint8_WayPoint9_WayPoint10', 'WayPoint28_WayPoint26_WayPoint21']
+	#caution_edges = ['WayPoint7_WayPoint8_WayPoint9_WayPoint10', 'WayPoint28_WayPoint26_WayPoint21']
 
 	path = []
 	vert = dict()
 
 	def __init__(self):
-        #client = actionlib.SimpleActionClient(<what server we want>, <message type used>)
+	
+		self.my_name = rospy.get_param('my_name', 'robot1')
+		self.other_robots = rospy.get_param('other_robots', ['robot2'])
+		self.caution_edges = rospy.get_param('caution_edges', [])
+		print self.my_name
+		print self.other_robots
+		print self.caution_edges
+
+	        #client = actionlib.SimpleActionClient(<what server we want>, <message type used>)
 		self.client = actionlib.SimpleActionClient('move_base', MoveBaseAction)
 		self.server = actionlib.SimpleActionServer('send_waypoint', DijkstraAction, execute_cb=self.navigate_goal2, auto_start = False)
 		self.client.wait_for_server()
@@ -55,7 +63,7 @@ class Dijkstra(object):
 		self.get_map_srv = rospy.ServiceProxy("/topological_map_publisher/get_topological_map", GetTopologicalMap)
 		self.top_map = self.get_map_srv('lg_june14').map
 
-		self.pub = rospy.Publisher('robot1/position_info', PositionInfo, queue_size=3)
+		self.pub = rospy.Publisher(self.my_name + '/position_info', PositionInfo, queue_size=3)
 		rospy.Subscriber('current_node', String, self.update_estimated_pose)
 		rospy.Subscriber('closest_node', String, self.update_closest_node)
 		rospy.Subscriber('robot2/position_info', PositionInfo, self.update_robot2_node)

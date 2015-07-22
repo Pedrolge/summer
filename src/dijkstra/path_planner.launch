@@ -1,0 +1,6 @@
+<launch>
+  <param name="my_name" value="robot1" />
+  <rosparam param="other_robots">['robot2']</rosparam>
+  <rosparam param="caution_edges">['WayPoint7_WayPoint8_WayPoint9_WayPoint10', 'WayPoint28_WayPoint26_WayPoint21']</rosparam>
+  <node name="path_planner" pkg="dijkstra" type="path_planner.py" output="screen" />
+</launch>
