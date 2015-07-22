@@ -65,7 +65,7 @@ tmux send-keys "rosrun master_discovery_fkie master_discovery"
 tmux select-window -t $SESSION:7
 tmux send-keys " clear" C-m
 message "Master sync"
-tmux send-keys "rosrun master_sync_fkie master_sync _sync_nodes:=['/path_planner'] _sync_topics:=['/robot2/position_info']"
+tmux send-keys "rosrun master_sync_fkie master_sync _sync_nodes:=['a'] _sync_topics:=['/robot2/position_info']"
 
 tmux select-window -t $SESSION:8
 tmux send-keys " clear" C-m

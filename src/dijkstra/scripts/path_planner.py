@@ -60,18 +60,23 @@ class Dijkstra(object):
 		self.client.wait_for_server()
 
 
+
+
 		self.get_map_srv = rospy.ServiceProxy("/topological_map_publisher/get_topological_map", GetTopologicalMap)
 		self.top_map = self.get_map_srv('lg_coordination').map
 
+		print "Publishing to %s" %(self.my_name + '/position_info')
 		self.pub = rospy.Publisher(self.my_name + '/position_info', PositionInfo, queue_size=3)
 		rospy.Subscriber('current_node', String, self.update_estimated_pose)
 		rospy.Subscriber('closest_node', String, self.update_closest_node)
 
 		if (len(self.other_robots) == 1):
+			print "Subscribing to %s" %(self.other_robots[0] + '/position_info')
 			rospy.Subscriber(self.other_robots[0] + '/position_info', PositionInfo, self.update_robot2_node)
 
 		self.server.start()
 		print "Path planner server started. Waiting for goal..."
+
 
 	def send_random_goal (self):
 				
@@ -368,6 +373,8 @@ class Dijkstra(object):
 		message.current_node = self.e_pose
 		message.current_edge = self.current_edge
 
+		print "Publishing the following message: "
+		print message
 		self.pub.publish(message)
 
 
