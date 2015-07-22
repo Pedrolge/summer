@@ -61,7 +61,7 @@ class Dijkstra(object):
 
 
 		self.get_map_srv = rospy.ServiceProxy("/topological_map_publisher/get_topological_map", GetTopologicalMap)
-		self.top_map = self.get_map_srv('lg_june14').map
+		self.top_map = self.get_map_srv('lg_coordination').map
 
 		self.pub = rospy.Publisher(self.my_name + '/position_info', PositionInfo, queue_size=3)
 		rospy.Subscriber('current_node', String, self.update_estimated_pose)
