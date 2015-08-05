@@ -160,7 +160,8 @@ class Dijkstra(object):
 			print "Goal reached"
 			self.server.set_succeeded()
 
-
+	def safe_pos(self):
+		print "calculating a safe position"
 
 	def cancel_goal():
 		client.cancel_goal()
