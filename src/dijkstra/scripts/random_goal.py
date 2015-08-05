@@ -26,7 +26,7 @@ class RandomGoal:
 		self.client.wait_for_server()
 
 		self.get_map_srv = rospy.ServiceProxy("/topological_map_publisher/get_topological_map", GetTopologicalMap)
-		self.top_map = self.get_map_srv('lg_june14').map
+		self.top_map = self.get_map_srv('lg_coordination').map
 
 	def send_random_goal(self):
 
@@ -40,7 +40,8 @@ class RandomGoal:
 		for name in nodes:
 			goal_list.append(name)
 
-		goal_list.remove("ChargingPoint")
+		if ("ChargingPoint" in goal_list):
+			goal_list.remove("ChargingPoint")
 
 		choice = randint(1, len(goal_list)-1)
 

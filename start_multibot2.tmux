@@ -65,12 +65,12 @@ tmux send-keys "rosrun master_discovery_fkie master_discovery"
 tmux select-window -t $SESSION:7
 tmux send-keys " clear" C-m
 message "Master sync"
-tmux send-keys "rosrun master_sync_fkie master_sync _sync_topics:=['/test1']"
+tmux send-keys "rosrun master_sync_fkie master_sync _sync_nodes:=['/path_planner'] _sync_topics:=['/robot1/position_info']"
 
 tmux select-window -t $SESSION:8
 tmux send-keys " clear" C-m
 message "Path planner"
-tmux send-keys "rosrun dijkstra path_planner.py"
+tmux send-keys "roslaunch dijkstra path_planner.launch"
 
 tmux select-window -t $SESSION:9
 tmux send-keys " clear" C-m

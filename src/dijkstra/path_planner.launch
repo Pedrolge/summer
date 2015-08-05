@@ -1,0 +1,9 @@
+<launch>
+	
+  <arg name="robot_name"/>
+
+  <param name="my_name" value="$(arg name)" />
+  <rosparam param="other_robots">['robot2']</rosparam>
+  <rosparam param="caution_edges">['WayPoint5_WayPoint6_WayPoint7_WayPoint8']</rosparam>
+  <node name="$(arg name)_path_planner" pkg="dijkstra" type="path_planner.py" output="screen" />
+</launch>
